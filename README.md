@@ -28,9 +28,4 @@ python -m pytest tests -v                # run tests (needs trained model)
 ## Prediction flow
 Form -> `dashboard.js` sends JSON to `/api/predict` -> Flask validates ranges -> loads `.joblib` model -> `predict()` -> JSON -> JS draws the coloured result card and chart.
 
-## Viva questions
-1. **What is a cloudburst?** A sudden, very intense rain event over a small area (about 100 mm in an hour).
-2. **Why Random Forest?** It combines many decision trees, is accurate, handles mixed scales, and needs little tuning.
-3. **How do you handle missing values?** Fill each missing input with that column's median; drop rows with no rainfall value.
-4. **Why isn't accuracy enough?** Almost all days are Low, so a model guessing "Low" looks accurate. Precision, recall and F1 show how well rare classes are caught (see `class_weight="balanced"`).
-5. **Is it a real cloudburst predictor?** No. The data has daily totals and no cloudburst labels, so it estimates extreme-rainfall risk as a prototype.
+
