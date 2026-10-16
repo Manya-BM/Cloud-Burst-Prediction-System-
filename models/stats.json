@@ -1,0 +1,44 @@
+{
+  "distribution": {
+    "labels": [
+      "0",
+      "0-5",
+      "5-15.6",
+      "15.6-64.5",
+      "64.5+"
+    ],
+    "counts": [
+      90275,
+      34641,
+      10316,
+      5096,
+      459
+    ]
+  },
+  "by_location": {
+    "Cairns": 5.77,
+    "Darwin": 5.09,
+    "CoffsHarbour": 5.05,
+    "GoldCoast": 3.73,
+    "Wollongong": 3.59,
+    "Williamtown": 3.51,
+    "Townsville": 3.49,
+    "NorahHead": 3.38,
+    "Sydney": 3.33,
+    "MountGinini": 3.25
+  },
+  "importance": {
+    "MinTemp": 0.176,
+    "MaxTemp": 0.115,
+    "Humidity9am": 0.205,
+    "Humidity3pm": 0.181,
+    "Pressure3pm": 0.118,
+    "WindGustSpeed": 0.101,
+    "Temp3pm": 0.104
+  },
+  "class_counts": [
+    135141,
+    5187,
+    459
+  ]
+}

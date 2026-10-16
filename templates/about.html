@@ -1,0 +1,8 @@
+{% extends "base.html" %}{% block title %}About{% endblock %}{% block content %}
+<div class="container py-5" style="max-width:900px"><h1 class="mb-4">About <span class="grad">CloudBurst</span></h1>
+{% for t,d in [('What is a cloudburst?','A cloudburst is a sudden, very intense burst of rain over a small area, often defined as about 100 mm of rain in an hour. It can cause flash floods and landslides.'),
+('Why does extreme-rainfall analysis matter?','Understanding the conditions that go with extreme rain helps with early awareness, planning and safety in flood-prone regions.'),
+('How does the model work?','A Random Forest builds many decision trees on historical daily observations (7 weather readings). Each tree votes and the majority class is the prediction. Classes follow IMD daily-rainfall categories of that day\'s rainfall: Low (under 15.6 mm), Moderate (15.6-64.4 mm), High (64.5 mm or more). Rainfall is not a model input because it defines the label.'),
+('Technologies used','Python, Flask, Pandas, NumPy, scikit-learn, Joblib, HTML, CSS, JavaScript, Bootstrap 5, Chart.js.'),
+('Limitations','The weatherAUS dataset has daily totals for Australian stations and contains no labelled cloudbursts, which are hourly events. High-risk days are very rare in it, so the model is weak on them (see per-class recall on the dashboard). This is an educational prototype, not a validated cloudburst forecasting system, and must not be used for safety decisions.')] %}
+<div class="glass mb-3"><h5 class="text-info">{{ t }}</h5><p class="mb-0">{{ d }}</p></div>{% endfor %}</div>{% endblock %}
